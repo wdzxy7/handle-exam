@@ -20,10 +20,6 @@ The following guidance is copy from Hit-leetcode：
 电脑2，获取答案用电脑
 pip install -r requirements_computer2.txt
 
-填上api key 和 大模型类型（如果是openai，填对应的gpt的模型名）
-key = "xxxxx"
-llm_type = "glm-4"
-
 运行 python computer2.py
 获取当前的请求url， 一般是192.168.x.x:9210, 这里我设的端口是9210
 
