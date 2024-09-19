@@ -1,11 +1,18 @@
 # handle-exam
 this code is base on https://github.com/lxygoodjob/Hit-leetcode. 
+
 I rewrite these codes: computer1.py, computer2.py call_llm.py.
+
 These changes makes this project more suitable for multiple-choice question.
+
 The screenshot is from your mouse position to the bottom right corner of the screen, and the screenshot results will store in the savefolder name as screenshot.png.
+
 If you change the savefolder and the file name, please make sure this configuration is the same in computer1.py, computer2.py, call_llm.py(line 55).
+
 Different from the original code, you must fix the dashscope.api_key in call_llm.py which can be get from https://help.aliyun.com/zh/dashscope/developer-reference/compatibility-of-openai-with-dashscope?spm=a2c4g.11186623.0.0.3a5446c1Be7jxC. 
+
 The prompt I have designed, you can modify it according to your needs.
+
 Do not change llm_type in computer2.py(line 31).
 
 The following guidance is copy from Hit-leetcode：
