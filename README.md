@@ -16,6 +16,7 @@ The prompt I have designed, you can modify it according to your needs.
 Do not change llm_type in computer2.py(line 31).
 
 The following guidance is copy from Hit-leetcode：
+
 电脑2，获取答案用电脑
 pip install -r requirements_computer2.txt
 
