@@ -31,7 +31,7 @@ def wrap_resp(res, status=400, headers={'Content-Type': 'application/json'}):
 llm_type = "qwen-vl-max-0809"
 
 ######## mian func ###########
-savefolder = 'F://handle-exam'
+savefolder = 'F://Hit-leetcode'
 
 def get_shot_answer():
     print('start request llm !')
