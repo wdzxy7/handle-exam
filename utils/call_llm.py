@@ -52,7 +52,7 @@ def query_llm_qw(model_name):
                     {
                         "role": "user",
                         "content": [
-                            {"image": 'F://Hit-leetcode//filesfolder//screenshot.png'},
+                            {"image": 'F://Hit-leetcode//filesfolder//screenshot.png'}, # must be absolute path same to computer2.py 
                             {"text": '根据图片内容给出答案'},
                         ]
                     }
