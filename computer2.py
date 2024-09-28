@@ -31,24 +31,25 @@ def wrap_resp(res, status=400, headers={'Content-Type': 'application/json'}):
 llm_type = "qwen-vl-max-0809"
 
 ######## mian func ###########
-savefolder = 'xxxx' # write your savefolder, must be absolute path
+savefolder = os.getcwd()
 
-def get_shot_answer():
+def get_shot_answer(user='base'):
     print('start request llm !')
     command = query_llm_qw("qwen-vl-max-0809")
-    print(command)
+    print('user:{} `s question results is {}'.format(user, command))
     return command
 
 @app.route('/get_code', methods = ['POST'])
 def get_code():
     inf = request.files.get('input_file')
+    user = request.form['user']
     out_folder = os.path.join(savefolder, 'output')
     os.makedirs(out_folder, exist_ok=True)
     os.makedirs(savefolder, exist_ok=True)
     input_file = os.path.join(savefolder, inf.filename)
     inf.save(input_file)
     try:
-        out = get_shot_answer()
+        out = get_shot_answer(user)
         res = {
             'msg': 'success',
             'code': 0,
