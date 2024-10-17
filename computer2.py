@@ -46,7 +46,7 @@ def get_code():
     out_folder = os.path.join(savefolder, 'output')
     os.makedirs(out_folder, exist_ok=True)
     os.makedirs(savefolder, exist_ok=True)
-    input_file = os.path.join(savefolder, inf.filename)
+    input_file = os.path.join(savefolder, 'filesfolder', inf.filename)
     inf.save(input_file)
     try:
         out = get_shot_answer(user)
