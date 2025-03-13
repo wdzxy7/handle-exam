@@ -4,10 +4,12 @@ import keyboard
 import requests
 from matplotlib import pyplot as plt
 
-url = "http://xxxxx:8080/get_code"
+url = "http://xxxxx:9000/get_code"
 
 savefolder = './filesfolder'
-
+if not os.path.exists(os.getcwd() + savefolder):
+    os.makedirs(os.getcwd() + savefolder)
+user = ''
 
 def get_shot():
     mouse_x, mouse_y = pyautogui.position()
@@ -35,11 +37,11 @@ def get_shot():
 def get_screen_and_rquest_llm():
     print('start screenshot !')
     img = get_shot()
-    # plt.imshow(img)
-    # plt.show()
+    plt.imshow(img)
+    plt.show()
     img_save_path = os.path.join(savefolder, 'screenshot.png')
     img.save(img_save_path)
-    files={'input_file': open(img_save_path,'rb')}
+    files={'input_file': open(img_save_path,'rb'), 'user':'base' if user == '' else user}
     response = requests.request("POST", url, files=files)
     if response.json()['msg'] == 'success':
         print('please see the computer2 screen and get code !')

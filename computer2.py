@@ -42,7 +42,7 @@ def get_shot_answer(user='base'):
 @app.route('/get_code', methods = ['POST'])
 def get_code():
     inf = request.files.get('input_file')
-    user = request.form['user']
+    user = request.files.get('user')
     out_folder = os.path.join(savefolder, 'output')
     os.makedirs(out_folder, exist_ok=True)
     os.makedirs(savefolder, exist_ok=True)
