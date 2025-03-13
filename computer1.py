@@ -4,7 +4,7 @@ import keyboard
 import requests
 from matplotlib import pyplot as plt
 
-url = "http://xxxxx:9000/get_code"
+url = "http://10.16.42.23:9000/get_code"
 
 savefolder = './filesfolder'
 if not os.path.exists(os.getcwd() + savefolder):

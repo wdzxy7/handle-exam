@@ -2,7 +2,7 @@ import os
 import json
 import numpy as np
 from flask import Flask, request, make_response
-from utils.call_llm import query_llm, query_llm_qw
+from utils.call_llm import query_llm_qw
 
 ########## flask func ##########
 app = Flask(__name__)
